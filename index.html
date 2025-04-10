@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Летнее меню кафе у реки</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+</head>
+<body>
+  <header>
+    <img src="cover.jpg" alt="Обложка" class="cover" />
+    <h1>Летнее меню кафе у реки</h1>
+    <p class="description">
+      Добро пожаловать в наше летнее кафе! Мы находимся у самой воды и предлагаем блюда из свежих сезонных продуктов.
+      Наше меню — это баланс вкуса, свежести и простоты. Для взрослых и детей, на завтрак, обед или ужин. Наслаждайтесь!
+    </p>
+  </header>
+  <div id="filters">
+    <select id="categoryFilter">
+      <option value="">Все категории</option>
+    </select>
+    <input type="number" id="minPrice" placeholder="Мин. цена" />
+    <input type="number" id="maxPrice" placeholder="Макс. цена" />
+    <button onclick="applyFilters()">Фильтровать</button>
+  </div>
+  <div id="menuContainer"></div>
+  <script src="script.js"></script>
+</body>
+</html>
