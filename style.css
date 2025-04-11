@@ -96,3 +96,22 @@ button:hover {
     align-items: center;
   }
 }
+
+
+/* Наведение на карточку */
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Наведение на изображение */
+.dish-img:hover {
+  filter: brightness(1.05);
+  transition: 0.3s ease;
+}
+
+/* Эффект нажатия кнопки */
+button:active {
+  transform: scale(0.98);
+}
