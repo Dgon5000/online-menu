@@ -49,3 +49,17 @@ function displayMenu(data) {
     container.appendChild(card);
   });
 }
+
+
+// Переключение темы
+const themeToggle = document.createElement("button");
+themeToggle.textContent = "Сменить тему";
+themeToggle.style.position = "fixed";
+themeToggle.style.bottom = "20px";
+themeToggle.style.right = "20px";
+themeToggle.style.zIndex = "1000";
+themeToggle.onclick = () => {
+  const current = document.body.getAttribute("data-theme");
+  document.body.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+};
+document.body.appendChild(themeToggle);
