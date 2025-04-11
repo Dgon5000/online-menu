@@ -37,7 +37,7 @@ function displayMenu(data) {
   data.forEach(item => {
     const card = document.createElement('div');
     card.className = 'card';
-    card.innerHTML = `
+    card.innerHTML = `<img src="${item.image}" class="dish-img" />
       <h3>${item.name}</h3>
       <p><strong>Категория:</strong> ${item.category}</p>
       <p><strong>Состав:</strong> ${item.ingredients}</p>
@@ -45,8 +45,7 @@ function displayMenu(data) {
       <p><strong>Подача:</strong> ${item.serving}</p>
       <p><strong>Вес:</strong> ${item.weight}</p>
       <p><strong>Цена:</strong> ${item.cost} ₽</p>
-      <p><strong>КБЖУ:</strong> ${item.calories} ккал / Б: ${item.protein} г / Ж: ${item.fat} г / У: ${item.carbs} г</p>
-    `;
+      <p><strong>КБЖУ:</strong> ${item.calories} ккал / Б: ${item.protein} г / Ж: ${item.fat} г / У: ${item.carbs} г</p>`;
     container.appendChild(card);
   });
 }
