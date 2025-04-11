@@ -51,15 +51,30 @@ function displayMenu(data) {
 }
 
 
-// Переключение темы
+// Переключение темы с иконкой
 const themeToggle = document.createElement("button");
-themeToggle.textContent = "Сменить тему";
+themeToggle.innerHTML = "🌙";
+themeToggle.setAttribute("aria-label", "Переключить тему");
 themeToggle.style.position = "fixed";
 themeToggle.style.bottom = "20px";
 themeToggle.style.right = "20px";
 themeToggle.style.zIndex = "1000";
+themeToggle.style.fontSize = "20px";
+themeToggle.style.borderRadius = "50%";
+themeToggle.style.width = "48px";
+themeToggle.style.height = "48px";
+themeToggle.style.padding = "0";
+themeToggle.style.lineHeight = "48px";
+themeToggle.style.textAlign = "center";
+themeToggle.style.border = "none";
+themeToggle.style.background = "#5a7e6b";
+themeToggle.style.color = "#fff";
+themeToggle.style.cursor = "pointer";
+
 themeToggle.onclick = () => {
   const current = document.body.getAttribute("data-theme");
-  document.body.setAttribute("data-theme", current === "dark" ? "light" : "dark");
+  const next = current === "dark" ? "light" : "dark";
+  document.body.setAttribute("data-theme", next);
+  themeToggle.innerHTML = next === "dark" ? "☀️" : "🌙";
 };
 document.body.appendChild(themeToggle);
